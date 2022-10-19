@@ -24,12 +24,12 @@ This repository contains replication files for the article:
 
 # Pre-analysis plan
 
-Available [here](#https://osf.io/79w5k/?view_only=25f37005f7d7418c9c9695e25c53a6c6)
+Available [here](https://osf.io/79w5k/?view_only=25f37005f7d7418c9c9695e25c53a6c6)
 
 # Instructions for replication
 
 For replication, make sure you have the following folder structure in place
-```shell
+```ascii
 .
 ├── data
 │   └── final                        <- folder with data used in the analysis
@@ -66,3 +66,4 @@ $ git close https://github.com/DiogoFerrari/populism-and-partisanship.git
 ## Note
 
 - The raw data (simulated or not) was recoded using the file `./src/data-organizing/recodings.py` (not provided)
+
