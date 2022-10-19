@@ -2,7 +2,7 @@
 
 This repository contains replication files for the article:
 
-	- Ferrari, D. (2022). The Effect of Party Identification and Party Cues on Populist Attitudes. Research and Politics (provisionally accepted).
+Ferrari, D. (2022). The Effect of Party Identification and Party Cues on Populist Attitudes. Research and Politics (provisionally accepted).
 
 # Citation
 
@@ -24,7 +24,7 @@ This repository contains replication files for the article:
 
 # Pre-analysis plan
 
-Available [here](https://osf.io/79w5k/?view_only=25f37005f7d7418c9c9695e25c53a6c6)
+Available [here](https://osf.io/79w5k/?view_only=25f37005f7d7418c9c9695e25c53a6c6).
 
 # Instructions for replication
 
@@ -35,7 +35,7 @@ For replication, make sure you have the following folder structure in place
 │   └── final                        <- folder with data used in the analysis
 ├── man                              <- folder with the manuscript (limited if copyright applies)
 │   ├── figures-and-tables           <- tables and figures (in .pdf, .png. etc) used in the manuscript
-│   └── supplementary-material       <- supplementatry material (SM)
+│   └── supp-material                <- supplementatry material (SM)
 │       └── figures-and-tables       <- tables and figures (in .pdf, .png. etc) used in the SM
 ├── src                              <- scripts for replication
 │   └── model                        <- folder with the scripts that contain the analyses
@@ -49,9 +49,9 @@ For replication, make sure you have the following folder structure in place
 
 ### Cloning from github
 
-1. Clone the repository:
+1. Clone the repository by running the following command in your terminal:
 ``` shell
-$ git close https://github.com/DiogoFerrari/populism-and-partisanship.git
+git clone https://github.com/DiogoFerrari/populism-and-partisanship.git
 ```
 2. Run the scripts in the folder `model`
 
@@ -59,7 +59,7 @@ $ git close https://github.com/DiogoFerrari/populism-and-partisanship.git
 
 1. Create the folder structure above, if needed
 2. Put the scripts in the folder `model`, 
-   - For scripts following this pattern in their name `__<filname>__`, leave them at the `src` folder
+   - For scripts following the pattern `__<filname>__`  in their name, leave them at the `src` folder
 3. Run the scripts in the folder `model`
 
 
