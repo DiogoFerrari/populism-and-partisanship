@@ -2,7 +2,7 @@
 
 This repository contains replication files for the article:
 
-Ferrari, D. (2022). The Effect of Party Identification and Party Cues on Populist Attitudes. Research and Politics (provisionally accepted).
+- Ferrari, D. (2022). The Effect of Party Identification and Party Cues on Populist Attitudes. Research and Politics (provisionally accepted).
 
 # Citation
 
