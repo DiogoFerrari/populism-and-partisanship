@@ -1,0 +1,41 @@
+\begin{table}[th!]
+\centering
+\caption{Linear regression of populist attitudes (minimal index) on partisan cue for populist (Pop) and anti-populist (APop) messages among Republican (Rep) voters. Number in parentheses are 95\% confidence intervals.}
+\label{tab-reg-rep-popmin.tex}
+\begin{threeparttable}
+\begin{tabular}{lC{3cm}C{3cm}C{3cm}C{3cm}}
+\toprule
+                &         Pop-Rep & Pop-Rep (with controls) &        APop-Rep & APop-Rep (with controls) \\
+\midrule
+     Cue: Biden &           0.000 &                   0.001 &        0.587*** &                  0.540** \\
+                & (-0.306, 0.306) &         (-0.302, 0.304) &  (0.255, 0.919) &           (0.198, 0.883) \\
+     Cue: Trump &         -0.293+ &                 -0.292+ &           0.014 &                    0.085 \\
+                & (-0.602, 0.016) &         (-0.592, 0.007) & (-0.285, 0.313) &          (-0.226, 0.396) \\
+   Income (std) &                 &                  -0.008 &                 &                   -0.124 \\
+                &                 &         (-0.140, 0.125) &                 &          (-0.287, 0.039) \\
+      Age (std) &                 &                  -0.018 &                 &                    0.026 \\
+                &                 &         (-0.152, 0.115) &                 &          (-0.126, 0.178) \\
+Education (std) &                 &                   0.105 &                 &                    0.052 \\
+                &                 &         (-0.038, 0.247) &                 &          (-0.097, 0.201) \\
+   Race (white) &                 &                   0.145 &                 &                    0.397 \\
+                &                 &         (-0.278, 0.569) &                 &          (-0.089, 0.882) \\
+  Gender (male) &                 &                  -0.189 &                 &                    0.155 \\
+                &                 &         (-0.457, 0.079) &                 &          (-0.132, 0.441) \\
+ Ideology (std) &                 &                0.525*** &                 &                  0.350** \\
+                &                 &          (0.339, 0.711) &                 &           (0.140, 0.560) \\
+       Num.Obs. &             278 &                     256 &             265 &                      237 \\
+             R2 &           0.015 &                   0.149 &           0.050 &                    0.115 \\
+        R2 Adj. &           0.008 &                   0.121 &           0.043 &                    0.084 \\
+            AIC &           835.8 &                   740.0 &           792.2 &                    695.8 \\
+            BIC &           850.3 &                   775.5 &           806.5 &                    730.4 \\
+       Log.Lik. &        -413.881 &                -360.015 &        -392.113 &                 -337.876 \\
+              F &           2.126 &                   5.399 &           6.871 &                    3.711 \\
+           RMSE &            1.08 &                    1.01 &            1.07 &                     1.03 \\
+     Std.Errors &       Classical &               Classical &       Classical &                Classical \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item \footnotesize $+ p < 0.1, * p < 0.05, ** p < 0.01, *** p < 0.001$
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

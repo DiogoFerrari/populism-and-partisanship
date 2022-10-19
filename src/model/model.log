@@ -1,0 +1,287 @@
+Loading paths...
+Loading constants...
+Loading function...
+Loading data 'survey.csv'...
+      y      ptyid                   cue       cueg       n      freq     stdev        lo        hi   nlabel
+<int64>   <object>              <object> <category> <int64> <float64> <float64> <float64> <float64> <object>
+      1   Democrat Anti-populist Message      Biden      89 78.070175  3.875321 70.474545 85.665805     n=89
+      1   Democrat Anti-populist Message    Control      83 57.241379  4.108496 49.188727 65.294032     n=83
+      1   Democrat Anti-populist Message      Trump      37 31.355932  4.270909 22.984950 39.726915     n=37
+      1   Democrat      Populist Message      Biden      92 92.929293  2.576263 87.879818 97.978768     n=92
+      1   Democrat      Populist Message    Control     137 83.030303  2.922223 77.302746 88.757860    n=137
+      1   Democrat      Populist Message      Trump      69 51.492537  4.317417 43.030399 59.954675     n=69
+      1 Republican Anti-populist Message      Biden      12 20.000000  5.163978  9.878604 30.121396     n=12
+      1 Republican Anti-populist Message    Control      68 56.198347  4.510392 47.357978 65.038716     n=68
+      1 Republican Anti-populist Message      Trump      61 72.619048  4.865303 63.083053 82.155042     n=61
+      1 Republican      Populist Message      Biden      48 57.142857  5.399492 46.559852 67.725862     n=48
+      1 Republican      Populist Message    Control      97 85.840708  3.279655 79.412584 92.268832     n=97
+      1 Republican      Populist Message      Trump      69 85.185185  3.947186 77.448700 92.921671     n=69
+Running model Pop-Dem...
+Running model Pop-Dem (with controls)...
+Running model Pop-Rep...
+Running model Pop-Rep (with controls)...
+Running model APop-Dem...
+Running model APop-Dem (with controls)...
+Running model APop-Rep...
+Running model APop-Rep (with controls)...
+                           Pop-Dem Pop-Dem (with controls)          Pop-Rep Pop-Rep (with controls)         APop-Dem APop-Dem (with controls)         APop-Rep APop-Rep (with controls)
+         <object>         <object>                <object>         <object>                <object>         <object>                 <object>         <object>                 <object>
+        cuegBiden           0.988*                   0.753        -1.514***               -1.476***         0.978***                   0.797*        -1.636***                -1.971***
+                    (0.170, 1.933)         (-0.115, 1.732) (-2.219, -0.847)        (-2.245, -0.748)   (0.435, 1.543)           (0.180, 1.436) (-2.399, -0.935)         (-2.920, -1.131)
+        cuegTrump        -1.528***               -1.612***           -0.053                   0.036        -1.075***                -1.380***           0.726*                   0.651+
+                  (-2.069, -1.008)        (-2.235, -1.018)  (-0.858, 0.775)         (-0.837, 0.940) (-1.592, -0.572)         (-1.989, -0.795)   (0.136, 1.337)          (-0.008, 1.332)
+   `Income (std)`                                    0.023                                    0.189                                     0.130                                     0.110
+                                           (-0.236, 0.305)                          (-0.145, 0.562)                           (-0.126, 0.392)                           (-0.269, 0.485)
+      `Age (std)`                                  -0.275+                                   -0.096                                   -0.258*                                   -0.412*
+                                           (-0.589, 0.032)                          (-0.438, 0.244)                          (-0.517, -0.003)                          (-0.760, -0.077)
+`Education (std)`                                  -0.319*                                   -0.085                                   -0.274*                                     0.109
+                                          (-0.625, -0.023)                          (-0.445, 0.276)                          (-0.545, -0.005)                           (-0.220, 0.442)
+   `Race (white)`                                    0.193                                   -0.874                                    -0.339                                  -2.353**
+                                           (-0.480, 0.864)                          (-2.400, 0.326)                           (-0.892, 0.206)                          (-4.014, -1.012)
+  `Gender (male)`                                   0.779*                                   -0.169                                   0.827**                                     0.062
+                                            (0.184, 1.397)                          (-0.850, 0.515)                            (0.314, 1.350)                           (-0.568, 0.691)
+ `Ideology (std)`                                   0.296+                                    0.164                                   0.451**                                     0.365
+                                           (-0.026, 0.630)                          (-0.308, 0.634)                            (0.166, 0.750)                           (-0.098, 0.840)
+         Num.Obs.              398                     346              278                     256              377                      336              265                      237
+              AIC            392.5                   330.9            280.9                   257.6            470.7                    391.2            330.5                    285.6
+              BIC            404.5                   365.5            291.7                   289.5            482.5                    425.5            341.3                    316.8
+         Log.Lik.         -193.255                -156.463         -137.429                -119.815         -232.333                 -186.591         -162.272                 -133.813
+                F           26.438                   6.875           12.325                   2.842           23.597                    7.788           17.129                    4.902
+             RMSE             0.99                    0.96             1.00                    0.98             1.11                     1.07             1.11                     1.08
+       Std.Errors        Classical               Classical        Classical               Classical        Classical                Classical        Classical                Classical
+   model        term  estimate  conf.low  conf.high      odds  odds.low  odds.high  perc_change  perc_change.low  perc_change.high
+<object>    <object> <float64> <float64>  <float64> <float64> <float64>  <float64>    <float64>        <float64>         <float64>
+ Pop-Dem (Intercept)  1.587776  1.197951   2.014136  4.892857  3.313321   7.494251   389.285714       231.332093        649.425148
+ Pop-Dem   cuegBiden  0.988102  0.169611   1.933457  2.686131  1.184844   6.913370   168.613139        18.484378        591.337049
+ Pop-Dem   cuegTrump -1.528057 -2.069058  -1.008204  0.216957  0.126305   0.364874   -78.304323       -87.369533        -63.512621
+   model        term  estimate  conf.low  conf.high      odds  odds.low  odds.high  perc_change  perc_change.low  perc_change.high
+<object>    <object> <float64> <float64>  <float64> <float64> <float64>  <float64>    <float64>        <float64>         <float64>
+APop-Dem (Intercept)  0.291706 -0.035422   0.624082  1.338710  0.965198   1.866532    33.870968        -3.480191         86.653186
+APop-Dem   cuegBiden  0.978054  0.435211   1.543016  2.659277  1.545289   4.678680   165.927711        54.528855        367.868036
+APop-Dem   cuegTrump -1.075237 -1.592061  -0.571616  0.341217  0.203506   0.564612   -65.878328       -79.649433        -43.538799
+   model        term  estimate  conf.low  conf.high      odds  odds.low  odds.high  perc_change  perc_change.low  perc_change.high
+<object>    <object> <float64> <float64>  <float64> <float64> <float64>  <float64>    <float64>        <float64>         <float64>
+ Pop-Rep (Intercept)  1.802122  1.303302   2.368278  6.062500  3.681431  10.678988   506.250000       268.143132        967.898769
+ Pop-Rep   cuegBiden -1.514440 -2.219009  -0.846811  0.219931  0.108717   0.428780   -78.006873       -89.128318        -57.122002
+ Pop-Rep   cuegTrump -0.052922 -0.858424   0.775127  0.948454  0.423829   2.170867    -5.154639       -57.617058        117.086687
+   model        term  estimate  conf.low  conf.high      odds  odds.low  odds.high  perc_change  perc_change.low  perc_change.high
+<object>    <object> <float64> <float64>  <float64> <float64> <float64>  <float64>    <float64>        <float64>         <float64>
+APop-Rep (Intercept)  0.249216 -0.108209   0.611996  1.283019  0.897440   1.844108    28.301887       -10.256016         84.410790
+APop-Rep   cuegBiden -1.635510 -2.399028  -0.934728  0.194853  0.090806   0.392693   -80.514706       -90.919385        -60.730743
+APop-Rep   cuegTrump  0.726164  0.135501   1.337358  2.067136  1.145110   3.808968   106.713555        14.511007        280.896769
+        y     cueg model_id      pred     lower     upper
+<float64> <object> <object> <float64> <float64> <float64>
+      NaN    Trump APop-Dem  0.313559  0.236415  0.402605
+      NaN  Control APop-Dem  0.572414  0.490677  0.650379
+      NaN    Biden APop-Dem  0.780702  0.695533  0.847277
+        y     cueg model_id      pred     lower     upper
+<float64> <object> <object> <float64> <float64> <float64>
+      NaN  Control APop-Rep  0.561983  0.472550  0.647563
+      NaN    Trump APop-Rep  0.726190  0.621472  0.810760
+      NaN    Biden APop-Rep  0.200000  0.117236  0.320012
+                         Pop-Dem Pop-Dem (with controls)         APop-Dem APop-Dem (with controls)
+       <object>         <object>                <object>         <object>                 <object>
+     Cue: Biden           0.988*                   0.753         0.978***                   0.797*
+                  (0.170, 1.933)         (-0.115, 1.732)   (0.435, 1.543)           (0.180, 1.436)
+     Cue: Trump        -1.528***               -1.612***        -1.075***                -1.380***
+                (-2.069, -1.008)        (-2.235, -1.018) (-1.592, -0.572)         (-1.989, -0.795)
+   Income (std)                                    0.023                                     0.130
+                                         (-0.236, 0.305)                           (-0.126, 0.392)
+      Age (std)                                  -0.275+                                   -0.258*
+                                         (-0.589, 0.032)                          (-0.517, -0.003)
+Education (std)                                  -0.319*                                   -0.274*
+                                        (-0.625, -0.023)                          (-0.545, -0.005)
+   Race (white)                                    0.193                                    -0.339
+                                         (-0.480, 0.864)                           (-0.892, 0.206)
+  Gender (male)                                   0.779*                                   0.827**
+                                          (0.184, 1.397)                            (0.314, 1.350)
+ Ideology (std)                                   0.296+                                   0.451**
+                                         (-0.026, 0.630)                            (0.166, 0.750)
+       Num.Obs.              398                     346              377                      336
+            AIC            392.5                   330.9            470.7                    391.2
+            BIC            404.5                   365.5            482.5                    425.5
+       Log.Lik.         -193.255                -156.463         -232.333                 -186.591
+              F           26.438                   6.875           23.597                    7.788
+           RMSE             0.99                    0.96             1.11                     1.07
+     Std.Errors        Classical               Classical        Classical                Classical
+                         Pop-Rep Pop-Rep (with controls)         APop-Rep APop-Rep (with controls)
+       <object>         <object>                <object>         <object>                 <object>
+     Cue: Biden        -1.514***               -1.476***        -1.636***                -1.971***
+                (-2.219, -0.847)        (-2.245, -0.748) (-2.399, -0.935)         (-2.920, -1.131)
+     Cue: Trump           -0.053                   0.036           0.726*                   0.651+
+                 (-0.858, 0.775)         (-0.837, 0.940)   (0.136, 1.337)          (-0.008, 1.332)
+   Income (std)                                    0.189                                     0.110
+                                         (-0.145, 0.562)                           (-0.269, 0.485)
+      Age (std)                                   -0.096                                   -0.412*
+                                         (-0.438, 0.244)                          (-0.760, -0.077)
+Education (std)                                   -0.085                                     0.109
+                                         (-0.445, 0.276)                           (-0.220, 0.442)
+   Race (white)                                   -0.874                                  -2.353**
+                                         (-2.400, 0.326)                          (-4.014, -1.012)
+  Gender (male)                                   -0.169                                     0.062
+                                         (-0.850, 0.515)                           (-0.568, 0.691)
+ Ideology (std)                                    0.164                                     0.365
+                                         (-0.308, 0.634)                           (-0.098, 0.840)
+       Num.Obs.              278                     256              265                      237
+            AIC            280.9                   257.6            330.5                    285.6
+            BIC            291.7                   289.5            341.3                    316.8
+       Log.Lik.         -137.429                -119.815         -162.272                 -133.813
+              F           12.325                   2.842           17.129                    4.902
+           RMSE             1.00                    0.98             1.11                     1.08
+     Std.Errors        Classical               Classical        Classical                Classical
+Running model Populist Message...
+Running model Populist Message (with controls)...
+Running model Anti-populist Message...
+Running model Anti-populist Message (with controls)...
+                                                  Populist Message Populist Message (with controls) Anti-populist Message Anti-populist Message (with controls)
+                                         <object>         <object>                         <object>              <object>                              <object>
+                                        cuegBiden           -0.214                           -0.281                -0.281                               -0.441*
+                                                   (-0.641, 0.226)                  (-0.751, 0.204)       (-0.663, 0.094)                      (-0.869, -0.022)
+                                        cuegTrump        -0.733***                        -0.727***                -0.122                                -0.283
+                                                  (-1.121, -0.343)                 (-1.157, -0.297)       (-0.464, 0.222)                       (-0.667, 0.102)
+            `Party identification (with leaners)`            0.029                           -0.043                -0.009                                -0.098
+                                                   (-0.083, 0.143)                  (-0.190, 0.104)       (-0.100, 0.081)                       (-0.219, 0.020)
+cuegBiden × `Party identification (with leaners)`        -0.437***                        -0.444***             -0.491***                             -0.496***
+                                                  (-0.627, -0.256)                 (-0.654, -0.244)      (-0.662, -0.327)                      (-0.683, -0.318)
+cuegTrump × `Party identification (with leaners)`          0.261**                          0.285**              0.380***                              0.397***
+                                                    (0.098, 0.426)                   (0.104, 0.468)        (0.231, 0.532)                        (0.233, 0.565)
+                                   `Income (std)`                                             0.075                                                       0.139
+                                                                                    (-0.097, 0.257)                                             (-0.053, 0.333)
+                                      `Age (std)`                                           -0.165+                                                    -0.231**
+                                                                                    (-0.355, 0.024)                                            (-0.405, -0.059)
+                                `Education (std)`                                            -0.159                                                      -0.100
+                                                                                    (-0.351, 0.031)                                             (-0.283, 0.082)
+                                   `Race (white)`                                            -0.225                                                    -0.619**
+                                                                                    (-0.724, 0.257)                                            (-1.049, -0.197)
+                                  `Gender (male)`                                            0.432*                                                    0.593***
+                                                                                     (0.062, 0.808)                                              (0.257, 0.932)
+                                 `Ideology (std)`                                           0.324**                                                     0.362**
+                                                                                     (0.081, 0.573)                                              (0.140, 0.589)
+                                         Num.Obs.              878                              780                   834                                   727
+                                              AIC            943.3                            802.4                1060.4                                 882.8
+                                              BIC            972.0                            858.3                1088.8                                 937.9
+                                         Log.Lik.         -465.653                         -389.218              -524.216                              -429.400
+                                                F           16.390                            7.890                17.667                                10.051
+                                             RMSE             1.03                             1.01                  1.13                                  1.10
+                                       Std.Errors        Classical                        Classical             Classical                             Classical
+                Populist Message Populist Message (with controls) Anti-populist Message Anti-populist Message (with controls)
+       <object>         <object>                         <object>              <object>                              <object>
+          Biden           -0.214                           -0.281                -0.281                               -0.441*
+                 (-0.641, 0.226)                  (-0.751, 0.204)       (-0.663, 0.094)                      (-0.869, -0.022)
+          Trump        -0.733***                        -0.727***                -0.122                                -0.283
+                (-1.121, -0.343)                 (-1.157, -0.297)       (-0.464, 0.222)                       (-0.667, 0.102)
+        Pty Id.            0.029                           -0.043                -0.009                                -0.098
+                 (-0.083, 0.143)                  (-0.190, 0.104)       (-0.100, 0.081)                       (-0.219, 0.020)
+Biden × Pty Id.        -0.437***                        -0.444***             -0.491***                             -0.496***
+                (-0.627, -0.256)                 (-0.654, -0.244)      (-0.662, -0.327)                      (-0.683, -0.318)
+Trump × Pty Id.          0.261**                          0.285**              0.380***                              0.397***
+                  (0.098, 0.426)                   (0.104, 0.468)        (0.231, 0.532)                        (0.233, 0.565)
+   Income (std)                                             0.075                                                       0.139
+                                                  (-0.097, 0.257)                                             (-0.053, 0.333)
+      Age (std)                                           -0.165+                                                    -0.231**
+                                                  (-0.355, 0.024)                                            (-0.405, -0.059)
+Education (std)                                            -0.159                                                      -0.100
+                                                  (-0.351, 0.031)                                             (-0.283, 0.082)
+   Race (white)                                            -0.225                                                    -0.619**
+                                                  (-0.724, 0.257)                                            (-1.049, -0.197)
+  Gender (male)                                            0.432*                                                    0.593***
+                                                   (0.062, 0.808)                                              (0.257, 0.932)
+ Ideology (std)                                           0.324**                                                     0.362**
+                                                   (0.081, 0.573)                                              (0.140, 0.589)
+       Num.Obs.              878                              780                   834                                   727
+            AIC            943.3                            802.4                1060.4                                 882.8
+            BIC            972.0                            858.3                1088.8                                 937.9
+       Log.Lik.         -465.653                         -389.218              -524.216                              -429.400
+              F           16.390                            7.890                17.667                                10.051
+           RMSE             1.03                             1.01                  1.13                                  1.10
+     Std.Errors        Classical                        Classical             Classical                             Classical
+Running model Pop-Dem...
+Running model Pop-Dem (with controls)...
+Running model Pop-Rep...
+Running model Pop-Rep (with controls)...
+Running model APop-Dem...
+Running model APop-Dem (with controls)...
+Running model APop-Rep...
+Running model APop-Rep (with controls)...
+                          Pop-Dem Pop-Dem (with controls)         Pop-Rep Pop-Rep (with controls)        APop-Dem APop-Dem (with controls)        APop-Rep APop-Rep (with controls)
+         <object>        <object>                <object>        <object>                <object>        <object>                 <object>        <object>                 <object>
+        cuegBiden          -0.172                  -0.192           0.000                   0.001          -0.100                   -0.047        0.587***                  0.540**
+                  (-0.454, 0.110)         (-0.483, 0.100) (-0.306, 0.306)         (-0.302, 0.304) (-0.368, 0.168)          (-0.325, 0.231)  (0.255, 0.919)           (0.198, 0.883)
+        cuegTrump          -0.008                   0.026         -0.293+                 -0.292+          -0.041                    0.065           0.014                    0.085
+                  (-0.266, 0.250)         (-0.237, 0.290) (-0.602, 0.016)         (-0.592, 0.007) (-0.306, 0.225)          (-0.211, 0.342) (-0.285, 0.313)          (-0.226, 0.396)
+   `Income (std)`                                 -0.103+                                  -0.008                                    0.038                                   -0.124
+                                          (-0.215, 0.008)                         (-0.140, 0.125)                          (-0.079, 0.155)                          (-0.287, 0.039)
+      `Age (std)`                                -0.197**                                  -0.018                                  -0.112+                                    0.026
+                                         (-0.324, -0.069)                         (-0.152, 0.115)                          (-0.231, 0.006)                          (-0.126, 0.178)
+`Education (std)`                                   0.017                                   0.105                                    0.064                                    0.052
+                                          (-0.104, 0.137)                         (-0.038, 0.247)                          (-0.060, 0.187)                          (-0.097, 0.201)
+   `Race (white)`                                  -0.001                                   0.145                                    0.127                                    0.397
+                                          (-0.264, 0.263)                         (-0.278, 0.569)                          (-0.122, 0.376)                          (-0.089, 0.882)
+  `Gender (male)`                                  -0.141                                  -0.189                                    0.088                                    0.155
+                                          (-0.383, 0.100)                         (-0.457, 0.079)                          (-0.150, 0.325)                          (-0.132, 0.441)
+ `Ideology (std)`                               -0.337***                                0.525***                                -0.288***                                  0.350**
+                                         (-0.462, -0.211)                          (0.339, 0.711)                         (-0.415, -0.160)                           (0.140, 0.560)
+         Num.Obs.             398                     346             278                     256             377                      336             265                      237
+               R2           0.004                   0.122           0.015                   0.149           0.001                    0.074           0.050                    0.115
+          R2 Adj.          -0.001                   0.102           0.008                   0.121          -0.004                    0.051           0.043                    0.084
+              AIC          1231.0                  1039.7           835.8                   740.0          1138.9                   1002.8           792.2                    695.8
+              BIC          1246.9                  1078.2           850.3                   775.5          1154.6                   1041.0           806.5                    730.4
+         Log.Lik.        -611.478                -509.873        -413.881                -360.015        -565.434                 -491.409        -392.113                 -337.876
+                F           0.832                   5.873           2.126                   5.399           0.269                    3.245           6.871                    3.711
+             RMSE            1.13                    1.07            1.08                    1.01            1.09                     1.06            1.07                     1.03
+       Std.Errors       Classical               Classical       Classical               Classical       Classical                Classical       Classical                Classical
+                        Pop-Dem Pop-Dem (with controls)        APop-Dem APop-Dem (with controls)
+       <object>        <object>                <object>        <object>                 <object>
+     Cue: Biden          -0.172                  -0.192          -0.100                   -0.047
+                (-0.454, 0.110)         (-0.483, 0.100) (-0.368, 0.168)          (-0.325, 0.231)
+     Cue: Trump          -0.008                   0.026          -0.041                    0.065
+                (-0.266, 0.250)         (-0.237, 0.290) (-0.306, 0.225)          (-0.211, 0.342)
+   Income (std)                                 -0.103+                                    0.038
+                                        (-0.215, 0.008)                          (-0.079, 0.155)
+      Age (std)                                -0.197**                                  -0.112+
+                                       (-0.324, -0.069)                          (-0.231, 0.006)
+Education (std)                                   0.017                                    0.064
+                                        (-0.104, 0.137)                          (-0.060, 0.187)
+   Race (white)                                  -0.001                                    0.127
+                                        (-0.264, 0.263)                          (-0.122, 0.376)
+  Gender (male)                                  -0.141                                    0.088
+                                        (-0.383, 0.100)                          (-0.150, 0.325)
+ Ideology (std)                               -0.337***                                -0.288***
+                                       (-0.462, -0.211)                         (-0.415, -0.160)
+       Num.Obs.             398                     346             377                      336
+             R2           0.004                   0.122           0.001                    0.074
+        R2 Adj.          -0.001                   0.102          -0.004                    0.051
+            AIC          1231.0                  1039.7          1138.9                   1002.8
+            BIC          1246.9                  1078.2          1154.6                   1041.0
+       Log.Lik.        -611.478                -509.873        -565.434                 -491.409
+              F           0.832                   5.873           0.269                    3.245
+           RMSE            1.13                    1.07            1.09                     1.06
+     Std.Errors       Classical               Classical       Classical                Classical
+                        Pop-Rep Pop-Rep (with controls)        APop-Rep APop-Rep (with controls)
+       <object>        <object>                <object>        <object>                 <object>
+     Cue: Biden           0.000                   0.001        0.587***                  0.540**
+                (-0.306, 0.306)         (-0.302, 0.304)  (0.255, 0.919)           (0.198, 0.883)
+     Cue: Trump         -0.293+                 -0.292+           0.014                    0.085
+                (-0.602, 0.016)         (-0.592, 0.007) (-0.285, 0.313)          (-0.226, 0.396)
+   Income (std)                                  -0.008                                   -0.124
+                                        (-0.140, 0.125)                          (-0.287, 0.039)
+      Age (std)                                  -0.018                                    0.026
+                                        (-0.152, 0.115)                          (-0.126, 0.178)
+Education (std)                                   0.105                                    0.052
+                                        (-0.038, 0.247)                          (-0.097, 0.201)
+   Race (white)                                   0.145                                    0.397
+                                        (-0.278, 0.569)                          (-0.089, 0.882)
+  Gender (male)                                  -0.189                                    0.155
+                                        (-0.457, 0.079)                          (-0.132, 0.441)
+ Ideology (std)                                0.525***                                  0.350**
+                                         (0.339, 0.711)                           (0.140, 0.560)
+       Num.Obs.             278                     256             265                      237
+             R2           0.015                   0.149           0.050                    0.115
+        R2 Adj.           0.008                   0.121           0.043                    0.084
+            AIC           835.8                   740.0           792.2                    695.8
+            BIC           850.3                   775.5           806.5                    730.4
+       Log.Lik.        -413.881                -360.015        -392.113                 -337.876
+              F           2.126                   5.399           6.871                    3.711
+           RMSE            1.08                    1.01            1.07                     1.03
+     Std.Errors       Classical               Classical       Classical                Classical
+Done!

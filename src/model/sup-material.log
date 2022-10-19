@@ -1,0 +1,198 @@
+Loading paths...
+Loading constants...
+Loading function...
+Loading data 'survey-sm.csv'...
+       Gender  Sample Size  Freq (Survey)
+     <object>      <int64>      <float64>
+       Female          931      54.380841
+         Male          768      44.859813
+Neither/other           13       0.759346
+Loading data 'census.xlsx'...
+       Age  Sample Size  Freq (Survey)  Freq (Census)
+  <object>      <int64>      <float64>      <float64>
+  18 to 24          209      12.207944      11.898368
+  25 to 29          161       9.404206       9.101399
+  30 to 34          173      10.105140       8.753486
+  35 to 39          163       9.521028       8.511815
+  40 to 44          156       9.112150       7.907881
+  45 to 49          151       8.820093       7.990789
+  50 to 54          148       8.644860       8.016900
+  55 to 59          116       6.775701       8.416153
+  60 to 64          111       6.483645       8.220281
+  65 to 69          149       8.703271       6.826848
+  70 to 74          108       6.308411       5.542544
+  75 to 79           48       2.803738       3.823284
+  80 to 84           14       0.817757       2.499483
+85 or over            5       0.292056       2.490769
+Loading data 'census.xlsx'...
+                                                                           Education  Sample Size  Freq (Survey)  Freq (Census)
+                                                                            <object>      <int64>      <float64>      <float64>
+                                                           Associate degree (2-year)          150       8.761682       7.576740
+                                                  College/Bachelor’s degree (4-year)          420      24.532710      19.300537
+Complete Master, Doctoral, or terminal professional degree (e.g., MA, Ph.D., JD, MD)          260      15.186916      11.277009
+                                 Complete high school (or equivalent, including GED)          496      28.971963      27.590105
+                                                               Less than high school           39       2.278037      11.483289
+                                                    Some college but didn't complete          347      20.268692      22.784218
+Loading data 'census.xlsx'...
+                               Race  Sample Size  Freq (Survey)  Freq (Census)
+                           <object>      <int64>      <float64>      <float64>
+   American Indian or Alaska Native           23       1.343458       1.153730
+                              Asian           50       2.920561       6.705211
+          Black or African-American          222      12.967290      16.000000
+Native Hawaiian or Pacific Islander            4       0.233645       0.209104
+                              Other           88       5.140187       8.695628
+                              White         1325      77.394860      67.300000
+Loading data 'census.xlsx'...
+          Income  Sample Size  Freq (Survey)  Freq (Census)
+        <object>      <int64>      <float64>      <float64>
+      0 to 10000          103       6.016355            5.8
+  10000 to 14999           79       4.614486            4.0
+100000 to 149999          164       9.579439           15.7
+  15000 to 24999          191      11.156542            8.3
+150000 to 199999           81       4.731308            7.2
+  200000 or more           62       3.621495            8.5
+  25000 to 34999          168       9.813084            8.4
+  35000 to 49999          270      15.771028           11.9
+  50000 to 74999          382      22.313084           17.4
+  75000 to 99999          212      12.383178           12.8
+                           variable       N   Missing  Missing (%)          Mean   Std.Dev    Median       Min       Max
+                           <object> <int64> <float64>    <float64>     <float64> <float64> <float64> <float64> <float64>
+                       Income (std)    1650      62.0     0.037576 -3.132848e-16  1.000000 -0.270138 -1.162495  6.382042
+                          Age (std)    1707       5.0     0.002929 -1.665009e-17  1.000000 -0.209394 -1.449875  2.153427
+                    Education (std)    1712       0.0     0.000000 -2.075183e-17  1.000000 -0.457676 -1.767944  1.507727
+                       Race (white)    1712       0.0     0.000000  7.739486e-01  0.418395  1.000000  0.000000  1.000000
+                      Gender (male)    1712       0.0     0.000000  4.485981e-01  0.497496  0.000000  0.000000  1.000000
+                     Ideology (std)    1571     141.0     0.089752  4.749013e-17  1.000000 -0.074489 -1.741476  1.592497
+Party identification (with leaners)    1712       0.0     0.000000 -3.966121e-01  2.328350 -1.000000 -3.000000  3.000000
+Checking balance for Populist Message for Biden...
+Checking balance for Populist Message for Trump...
+Checking balance for Anti-populist Message for Biden...
+Checking balance for Anti-populist Message for Trump...
+
+Dep. var: popadd
+Running model Pop-Dem...
+Running model Pop-Dem (with controls)...
+Running model Pop-Rep...
+Running model Pop-Rep (with controls)...
+Running model APop-Dem...
+Running model APop-Dem (with controls)...
+Running model APop-Rep...
+Running model APop-Rep (with controls)...
+                        Pop-Dem Pop-Dem (with controls)        APop-Dem APop-Dem (with controls)
+       <object>        <object>                <object>        <object>                 <object>
+     Cue: Biden          -0.228                  -0.135          -0.202                   -0.196
+                (-0.816, 0.361)         (-0.759, 0.490) (-0.767, 0.362)          (-0.757, 0.365)
+     Cue: Trump          -0.075                   0.040          -0.147                   -0.052
+                (-0.614, 0.463)         (-0.525, 0.606) (-0.706, 0.412)          (-0.610, 0.506)
+   Income (std)                                  -0.154                                    0.082
+                                        (-0.394, 0.086)                          (-0.154, 0.319)
+      Age (std)                                -0.411**                                 -0.380**
+                                       (-0.684, -0.137)                         (-0.619, -0.140)
+Education (std)                                   0.149                                    0.079
+                                        (-0.110, 0.409)                          (-0.170, 0.327)
+   Race (white)                                  -0.058                                    0.002
+                                        (-0.623, 0.507)                          (-0.501, 0.504)
+  Gender (male)                                  -0.066                                    0.038
+                                        (-0.584, 0.452)                          (-0.440, 0.517)
+ Ideology (std)                               -0.727***                                -0.833***
+                                       (-0.996, -0.458)                         (-1.090, -0.576)
+       Num.Obs.             398                     346             377                      336
+             R2           0.001                   0.108           0.001                    0.136
+        R2 Adj.          -0.004                   0.087          -0.004                    0.115
+            AIC          1816.1                  1567.6          1701.0                   1474.2
+            BIC          1832.1                  1606.1          1716.7                   1512.3
+       Log.Lik.        -904.069                -773.807        -846.481                 -727.075
+              F           0.291                   5.092           0.274                    6.444
+           RMSE            2.35                    2.29            2.29                     2.14
+     Std.Errors       Classical               Classical       Classical                Classical
+                        Pop-Rep Pop-Rep (with controls)        APop-Rep APop-Rep (with controls)
+       <object>        <object>                <object>        <object>                 <object>
+     Cue: Biden           0.005                   0.058         1.086**                  1.098**
+                (-0.701, 0.711)         (-0.632, 0.748)  (0.374, 1.798)           (0.343, 1.852)
+     Cue: Trump         -0.714+                 -0.695*          -0.071                   -0.052
+                (-1.427, 0.000)        (-1.378, -0.012) (-0.711, 0.570)          (-0.737, 0.633)
+   Income (std)                                  -0.153                                   -0.275
+                                        (-0.455, 0.148)                          (-0.634, 0.084)
+      Age (std)                                   0.066                                    0.074
+                                        (-0.238, 0.369)                          (-0.260, 0.408)
+Education (std)                                   0.251                                    0.067
+                                        (-0.073, 0.576)                          (-0.262, 0.395)
+   Race (white)                                   0.173                                    0.464
+                                        (-0.792, 1.137)                          (-0.605, 1.534)
+  Gender (male)                                  -0.242                                    0.352
+                                        (-0.853, 0.369)                          (-0.278, 0.983)
+ Ideology (std)                                1.238***                                   0.525*
+                                         (0.813, 1.662)                           (0.063, 0.988)
+       Num.Obs.             278                     256             265                      237
+             R2           0.017                   0.158           0.040                    0.083
+        R2 Adj.           0.010                   0.131           0.033                    0.051
+            AIC          1301.3                  1161.7          1196.4                   1069.9
+            BIC          1315.8                  1197.1          1210.7                   1104.6
+       Log.Lik.        -646.659                -570.829        -594.181                 -524.960
+              F           2.370                   5.788           5.519                    2.592
+           RMSE            2.49                    2.29            2.29                     2.26
+     Std.Errors       Classical               Classical       Classical                Classical
+Dep. var: popmul
+Running model Pop-Dem...
+Running model Pop-Dem (with controls)...
+Running model Pop-Rep...
+Running model Pop-Rep (with controls)...
+Running model APop-Dem...
+Running model APop-Dem (with controls)...
+Running model APop-Rep...
+Running model APop-Rep (with controls)...
+                        Pop-Dem Pop-Dem (with controls)        APop-Dem APop-Dem (with controls)
+       <object>        <object>                <object>        <object>                 <object>
+     Cue: Biden          -0.007                  -0.004          -0.005                   -0.005
+                (-0.048, 0.034)         (-0.047, 0.039) (-0.044, 0.035)          (-0.044, 0.035)
+     Cue: Trump           0.000                   0.010          -0.012                   -0.002
+                (-0.038, 0.037)         (-0.030, 0.049) (-0.051, 0.027)          (-0.041, 0.037)
+   Income (std)                                  -0.011                                    0.008
+                                        (-0.028, 0.006)                          (-0.009, 0.024)
+      Age (std)                               -0.036***                                -0.030***
+                                       (-0.055, -0.017)                         (-0.047, -0.014)
+Education (std)                                   0.008                                    0.004
+                                        (-0.010, 0.026)                          (-0.014, 0.021)
+   Race (white)                                  -0.004                                    0.012
+                                        (-0.043, 0.035)                          (-0.023, 0.048)
+  Gender (male)                                  -0.010                                    0.004
+                                        (-0.046, 0.026)                          (-0.030, 0.038)
+ Ideology (std)                               -0.053***                                -0.059***
+                                       (-0.072, -0.035)                         (-0.077, -0.041)
+       Num.Obs.             398                     346             377                      336
+             R2           0.000                   0.131           0.001                    0.144
+        R2 Adj.          -0.005                   0.110          -0.004                    0.123
+            AIC          -304.4                  -280.9          -310.0                   -307.2
+            BIC          -288.5                  -242.4          -294.2                   -269.0
+       Log.Lik.         156.216                 150.442         158.980                  163.610
+              F           0.060                   6.326           0.184                    6.863
+           RMSE            0.16                    0.16            0.16                     0.15
+     Std.Errors       Classical               Classical       Classical                Classical
+                        Pop-Rep Pop-Rep (with controls)        APop-Rep APop-Rep (with controls)
+       <object>        <object>                <object>        <object>                 <object>
+     Cue: Biden          -0.004                  -0.002        0.086***                 0.087***
+                (-0.054, 0.046)         (-0.051, 0.047)  (0.038, 0.133)           (0.037, 0.137)
+     Cue: Trump         -0.045+                 -0.040+          -0.003                    0.006
+                (-0.096, 0.005)         (-0.089, 0.008) (-0.046, 0.039)          (-0.040, 0.052)
+   Income (std)                                  -0.017                                  -0.021+
+                                        (-0.038, 0.004)                          (-0.045, 0.003)
+      Age (std)                                  -0.002                                   -0.008
+                                        (-0.023, 0.020)                          (-0.030, 0.014)
+Education (std)                                  0.021+                                    0.008
+                                        (-0.002, 0.044)                          (-0.014, 0.030)
+   Race (white)                                  -0.003                                    0.009
+                                        (-0.070, 0.065)                          (-0.062, 0.080)
+  Gender (male)                                  -0.017                                   0.036+
+                                        (-0.061, 0.026)                          (-0.006, 0.078)
+ Ideology (std)                                0.092***                                 0.053***
+                                         (0.062, 0.121)                           (0.023, 0.084)
+       Num.Obs.             278                     256             265                      237
+             R2           0.013                   0.159           0.055                    0.127
+        R2 Adj.           0.005                   0.132           0.047                    0.096
+            AIC          -171.5                  -196.0          -239.3                   -214.3
+            BIC          -157.0                  -160.6          -225.0                   -179.6
+       Log.Lik.          89.764                 108.020         123.654                  117.156
+              F           1.755                   5.826           7.580                    4.129
+           RMSE            0.18                    0.16            0.15                     0.15
+     Std.Errors       Classical               Classical       Classical                Classical
+Done!

@@ -1,0 +1,176 @@
+
+/home/diogo/Dropbox/CienciasSociais/research/populism-or-partisanship/src/model/main.py,4787
+lang = 'pt'lang37,964
+lang = 'en'lang38,976
+save = Truesave39,988
+save = Falsesave40,1000
+stats    = importr('stats')stats54,1392
+base     = importr('base')base55,1420
+broom    = importr("broom")broom56,1447
+match    = importr("MatchIt")match57,1475
+ivreg    = importr("ivreg")ivreg58,1505
+ms       = importr("modelsummary")ms59,1533
+ggplot   = importr("ggplot2")ggplot60,1568
+jtools   = importr('jtools')jtools61,1598
+sjp      = importr('sjPlot')sjp62,1627
+graphics = importr("graphics")graphics63,1656
+grd      = importr("grDevices")grd64,1687
+                strip_background = element_rect(colour="white", fill="white"),strip_background79,1878
+                strip_text_x = element_text(size=11, face='bold', hjust='left'),strip_text_x80,1957
+                strip_text_y = element_text(size=11, face="bold", vjust=0),strip_text_y81,2038
+                plot_title = element_text(hjust=-1, size = 10)plot_title82,2114
+palette = sns.color_palette("cubehelix", 8)palette91,2329
+palette = sns.hls_palette(8, l=.3, s=.8)palette92,2373
+palette = sns.diverging_palette(255, 133, l=60, n=7, center="dark")palette93,2414
+                rc={'axes.labelsize': 8,rc102,2745
+        figure_size=[10,6], figure_size133,3657
+        subplots_adjust={'right':0.97, "left":.07,subplots_adjust134,3686
+        aspect_ratio=None,aspect_ratio136,3788
+        dpi=None,dpi137,3815
+        plot_title=element_text(face='bold', size=12, ha='left', va='center'),plot_title139,3844
+        axis_text=None,axis_text157,4306
+        axis_text_x=None,axis_text_x158,4330
+        axis_text_y=None,axis_text_y159,4356
+        axis_line=element_blank(),axis_line163,4440
+        axis_line_x=element_line(size=1),axis_line_x164,4475
+        axis_line_y=element_line(size=1),axis_line_y165,4517
+        legend_position = (0.1, .95),legend_position169,4617
+        legend_direction='horizontal',legend_direction170,4655
+        legend_title=element_text(size=10, face='bold',  ha='left', va='center'),legend_title171,4694
+        strip_background = element_rect(colour="white", fill="white", alpha=0),strip_background194,5471
+        strip_text=element_text(size=11, weight='bold',  ha='right', va='center'),strip_text195,5551
+        strip_text_x=element_text(size=11, weight='bold',  ha='right', va='center'),strip_text_x196,5634
+        strip_text_y=element_text(size=11, weight='bold',  ha='right', va='center'),strip_text_y197,5719
+        strip_margin_x=element_text(size=11, weight='bold',  ha='right', va='center'),strip_margin_x198,5804
+        strip_margin_y=element_text(size=11, weight='bold',  ha='right', va='center'),strip_margin_y199,5891
+        strip_margin=None, strip_margin200,5978
+        axis_ticks_major=element_line(alpha=.4),axis_ticks_major208,6276
+        axis_ticks_minor=element_line(alpha=.4),axis_ticks_minor209,6325
+        panel_grid_major=element_line(alpha=.4, size=.5),panel_grid_major223,6790
+        panel_grid_minor=element_line(alpha=.13, size=.5),panel_grid_minor224,6848
+        panel_ontop=True,panel_ontop238,7351
+fn = "~/Dropbox/CienciasSociais/research/survey-cem/survey-cem-2-analysis/data/interim/s2018.csv"fn244,7419
+df = ds.read_data(fn=fn)df245,7517
+df = df.query(f"yr==2018")df246,7542
+qlabels = {qlabels254,7624
+treatvar = 'treat_code'treatvar270,7859
+treatvars = ['treat_group', 'treat_label']treatvars271,7883
+treat = ['t1s', 't1l', 't2s', 't2l', 't3p', 't3r', 'controle']treat272,7926
+dfs = df.query(f"{treatvar} in {treat}")dfs273,7989
+vars = ['age', 'inchhpc_std']vars286,8252
+treat  = 't1l'treat296,8391
+covars = ['inchhpc_std', 'age_std', 'gender2', 'educ5_std', 'race2', 'tid_rel']covars297,8406
+X      = " + ".join(covars)X298,8486
+dft = df.query(f"treat_code==['t1l', 'controle']").filter(vars).dropna(subset=None, axis=0)dft300,8516
+tab1 = df.summary(covars)tab1303,8614
+f = f'{treat} ~ {X}'f306,8646
+mat = match.matchit(robj.Formula(f), data=dft,mat307,8667
+                    method = robj.NULL,method308,8714
+                    exact = robj.NULL,exact309,8754
+                    estimand = "ATE")estimand310,8793
+res = balance.bal_tab(mat, un = True).rx2['Balance']res311,8831
+tab2 = ds.eDataFrame(res).mutate({'variable': tab2.index})tab2312,8884
+tab = (tab317,8979
+kable = importr("kableExtra")kable330,9264
+a = kable.kbl(tab, format='latex', row_names=False,align='llllcl')a331,9294
+a = kable.group_rows_latex(a,  2, 4, 4, False,a332,9361
+                             escape=False,escape333,9408
+                             latex_align=';asdjk as;dfk j',latex_align334,9451
+                             indent=False,indent335,9511
+                             colnum=1colnum336,9554
+
+/home/diogo/Dropbox/CienciasSociais/research/populism-or-partisanship/src/model/model.py,3987
+SIMULATED_DATA=TrueSIMULATED_DATA2,1
+LANG = 'pt'LANG12,162
+LANG = 'en'LANG13,174
+SAVE = TrueSAVE14,186
+SAVE = FalseSAVE15,198
+fn = PATH_DATA_FINAL / 'survey.csv'fn18,229
+df = ds.read_data(fn=fn)df19,265
+ref="Control (Anti-populist Message)"ref35,500
+treats=df.treat.unique()treats36,538
+bal=ds.eDataFrame()bal38,566
+        res=(res43,692
+        bal = bal.bind_row(res)bal55,1037
+bal=bal.drop_rows(dropna=True)bal56,1069
+bal=bal.fill_na(value=np.nan , vars=None)bal57,1100
+x='abs(`Std Mean Diff`)'x62,1161
+y='variable'y63,1186
+color='treat'color64,1199
+title='Balance of covariates on observables'title65,1213
+subtitle=(f"Reference group: {ref}")subtitle66,1258
+xlab='Absolute Standard Mean Different'xlab67,1295
+ylab='Covariates'ylab68,1335
+g = (g69,1353
+        x        = xlab,x78,1674
+        y        = ylab,y79,1699
+        color    = robj.NULL, color80,1724
+        fill     = robj.NULL,fill81,1755
+        linetype = robj.NULL,linetype82,1785
+        shape    = robj.NULL,shape83,1815
+        title    = title,title84,1845
+        subtitle = subtitle,subtitle85,1871
+        caption  = robj.NULLcaption86,1900
+tab=(tab97,2032
+                        ordered=True)ordered104,2313
+x='cueg'x111,2378
+y='freq'y112,2387
+color='ptyid'color113,2396
+xlab='Message Supporter (Treatment Cue)'xlab114,2410
+ylab='Proportion of Voters in Favor of\nPopulist or Anti-populist Positions'ylab115,2451
+title='Proportion of Voters in Favor of Populist and Anti-populist Positions'title116,2528
+subtitle="(Bars represent the proportion standard errors)"subtitle117,2606
+dodge=1dodge118,2665
+facet='cue'facet119,2673
+legtitle="Voter's Party Identification"legtitle120,2685
+g = (g121,2725
+        x        = xlab,x140,3622
+        y        = ylab,y141,3647
+        color    = legtitle, color142,3672
+        fill     = legtitle,fill143,3702
+    	linetype = robj.NULL,linetype144,3731
+    	shape    = robj.NULL,shape145,3758
+        title    = title,title146,3785
+        subtitle = subtitle,subtitle147,3811
+        caption  = robj.NULLcaption148,3840
+    g = (g152,3900
+                          color = "black",color155,3979
+                          size = 30,size156,4022
+                          hjust=-.5,hjust158,4099
+                          vjust=-.5,vjust159,4136
+                          alpha=.4)alpha160,4173
+tab=df.select_rows(query=f"ptyid!='Independent'")tab170,4301
+cues=tab.cue.unique()cues172,4352
+ptyids=tab.ptyid.unique()ptyids173,4374
+ress=ds.eDataFrame()ress174,4400
+resf=[]resf175,4421
+Xs=XsXs176,4429
+    mod=estimate_ate('y', Xs=Xs, df=tab, ptyid=ptyid, cue=cue)mod179,4553
+    ress=ress.bind_row(get_estimates_summary(mod)ress181,4632
+tabres=resstabres197,5142
+x="estimate"x198,5154
+y="term"y199,5167
+ylab='Partisan Treatment Cue (Supports the Message)'ylab200,5176
+xlab='Average Causal Effect of Partisan Cue\non Support for Populist Message'xlab201,5229
+dodge=.3dodge202,5307
+color='ptyid'color203,5316
+facet=robj.NULLfacet204,5330
+facet_row=robj.NULLfacet_row205,5346
+facet_col=robj.NULLfacet_col206,5366
+facet='cue'facet207,5386
+title='Causal Effect of Partisan Cue'title208,5398
+subitle=("Causal effect is the average difference in support for the"+subitle209,5436
+legtitle="Voter's Party Identification"legtitle214,5755
+tabres = (tabres215,5795
+g=(g228,6151
+                                      color=color),color233,6387
+        x        = xlab,x245,6988
+        y        = ylab,y246,7013
+        color    = legtitle, color247,7038
+        fill     = robj.NULL,fill248,7068
+    	linetype = robj.NULL,linetype249,7098
+    	shape    = robj.NULL,shape250,7125
+        title    = title,title251,7152
+        subtitle = subtitle,subtitle252,7178
+        caption  = robj.NULLcaption253,7207
+Xs = ['age_std', 'educ_std', 'inchhpc_std', 'ideo_std', 'non_white', 'female']Xs270,7844
